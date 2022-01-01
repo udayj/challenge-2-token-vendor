@@ -19,7 +19,7 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   // Todo: transfer tokens to frontend address
   const yourToken = await ethers.getContract("YourToken", deployer);
 
-  // const result = await yourToken.transfer("YOUR_FRONT_END_ADDRESS", ethers.utils.parseEther("1000") );
+  const result = await yourToken.transfer("0xD952111E25dCF3Ec83282ded41B97c93176fc2C7", ethers.utils.parseEther("1000") );
 
   /*
     // Getting a previously deployed contract
@@ -32,7 +32,7 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
 
     //const yourContract = await ethers.getContractAt('YourContract', "0xaAC799eC2d00C013f1F11c37E654e59B0429DF6A") //<-- if you want to instantiate a version of a contract at a specific address!
   */
-
+  
   /*
   //If you want to send value to an address from the deployer
   const deployerWallet = ethers.provider.getSigner()
